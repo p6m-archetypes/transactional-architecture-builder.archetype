@@ -11,7 +11,7 @@ context += prompt("Author:", "author_full", #{
     help: "Author and Email",
 });
 
-context += set("organization-name", render("{{org-name}}-{{venture-name}}", context), #{
+context += set("organization-name", render("{{org-name}}-{{solution-name}}", context), #{
     cases: [
         CasedIdentityCasedValue(PROGRAMMING_CASES),
         FixedKeyCasedValue("organization-title", TitleCase),
@@ -65,9 +65,9 @@ if switch_enabled("debug-context") {
 
 if context.features.contains("Federated GraphQL Gateway") {
   log(Info, `Rendering Federated Gateway`);
-  render(Archetype("federated-gateway"), context["org-venture-name"], #{
+  render(Archetype("federated-gateway"), context["org-solution-name"], #{
     "org-name": context["org-name"],
-    "venture-name": context["venture-name"],
+    "solution-name": context["solution-name"],
   });
 }
 
@@ -75,7 +75,7 @@ if context.features.contains("Java Libraries") {
   log(Info, `Rendering Java Libraries`);
   render(Archetype("java-libs"), context["organization-name"], #{
     "org-name": context["org-name"],
-    "venture-name": context["venture-name"],
+    "solution-name": context["solution-name"],
     "standard": "v2",
   });
 }
@@ -85,7 +85,7 @@ if context.features.contains("Documentation Book") {
   let destination = context["organization-name"];
   let answers = #{
     "org-name": context["org-name"],
-    "venture-name": context["venture-name"],
+    "solution-name": context["solution-name"],
     "project-name": context["organization-name"] + " Documentation",
     "author_full": context["author_full"],
   };
@@ -99,7 +99,7 @@ fn render_app_set(apps, archetype_name, suffix, context) {
     let archetype = Archetype(archetype_name);
     let local_context = #{
       "org-name": context["org-name"],
-      "venture-name": context["venture-name"],
+      "solution-name": context["solution-name"],
       "project-suffix": suffix,
       "persistence": "CockroachDb",
       "platform-version": "1.0.0-SNAPSHOT",
