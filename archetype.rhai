@@ -76,7 +76,6 @@ if context.features.contains("Java Libraries") {
   render(Archetype("java-libs"), context["organization-name"], #{
     "org-name": context["org-name"],
     "solution-name": context["solution-name"],
-    "standard": "v2",
   });
 }
 
@@ -103,7 +102,6 @@ fn render_app_set(apps, archetype_name, suffix, context) {
       "project-suffix": suffix,
       "persistence": "CockroachDb",
       "platform-version": "1.0.0-SNAPSHOT",
-      "standard": "v2",
     };
     for app in apps {
       log(Info, `Rendering ${pascal_case(app)} ${suffix}`);
