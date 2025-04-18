@@ -9,12 +9,12 @@ requires:
   archetect: 2.0.0-ALPHA.15
 
 components:
-  org-prompts: git@github.com:p6m-dev/org-prompts.archetype.git
-  federated-gateway: git@github.com:p6m-dev/rust-graphql-federated-gateway.archetype.git
-  domain-gateway: git@github.com:p6m-dev/java-spring-boot-graphql-domain-gateway.archetype.git
-  java-libs: git@github.com:p6m-dev/java-platform-libs.archetype.git
-  service: git@github.com:p6m-dev/java-spring-boot-grpc-service.archetype.git
-  orchestrator: git@github.com:p6m-dev/java-spring-boot-grpc-service.archetype.git
-  adapter: git@github.com:p6m-dev/java-spring-boot-grpc-service.archetype.git
-  assessor: git@github.com:p6m-dev/java-spring-boot-grpc-assessor.archetype.git
-  mdbook: git@github.com:p6m-dev/mdbook.archetype.git
+  org-prompts: git@github.com:p6m-archetypes/org-prompts.archetype.git
+  federated-gateway: git@github.com:p6m-archetypes/rust-graphql-federated-gateway.archetype.git
+  domain-gateway: git@github.com:p6m-archetypes/java-spring-boot-graphql-domain-gateway.archetype.git
+  java-libs: git@github.com:p6m-archetypes/java-platform-libs.archetype.git
+  service: git@github.com:p6m-archetypes/java-spring-boot-grpc-service.archetype.git
+  orchestrator: git@github.com:p6m-archetypes/java-spring-boot-grpc-service.archetype.git
+  adapter: git@github.com:p6m-archetypes/java-spring-boot-grpc-service.archetype.git
+  assessor: git@github.com:p6m-archetypes/java-spring-boot-grpc-assessor.archetype.git
+  mdbook: git@github.com:p6m-archetypes/mdbook.archetype.git
